@@ -96,7 +96,7 @@ const FloatingTechIcons = () => {
 
           {/* Avatar image */}
           <img
-            src="/musab.jpg"
+            src="/musab-portfolio/musab.jpg"
             alt="مصعب أبوبشارة"
             className="relative w-full h-full rounded-full object-cover z-10"
           />
