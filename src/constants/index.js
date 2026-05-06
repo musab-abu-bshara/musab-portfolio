@@ -28,9 +28,11 @@ import {
   nodejs,
   java,
   nextjs,
+  Cypress,
   expressjs,
   tauri,
   orienteed,
+  jaffal,
   najah,
   grids,
   thuraa,
@@ -111,7 +113,7 @@ const services = [
     iconWebp: backendWebp,
   },
   {
-    title: "تصميم متجاوب",
+    title: "اختبار برمجيات",
     icon: creator,
     iconAvif: creatorAvif,
     iconWebp: creatorWebp,
@@ -201,6 +203,10 @@ const technologies = [
     name: "NestJS",
     icon: nestjs,
   },
+  {
+    name: "Cypress",
+    icon: Cypress,
+  },
 ];
 
 const experiences = [
@@ -231,16 +237,16 @@ const experiences = [
     ],
   },
   {
-    title: "مساهم في مشروع Delevary",
-    company_name: "Orienteed",
-    icon: orienteed,
+    title: "منصب مختبر برمجيات QA",
+    company_name: "Jaffal Group",
+    icon: jaffal,
     iconBg: "#383E56",
-    date: "2025",
+    date: "2026",
     points: [
-      "هي بمثابة فرصة للاحتكاك في مشروع ضخم وذو هيكلة معقدة",
-      "العمل على تطوير حلول توصيل مبتكرة وفعالة.",
-      "المساهمة في تحسين تجربة المستخدم وواجهات التطبيق.",
-      "التعاون مع فريق التطوير لتنفيذ ميزات جديدة.",
+      "العمل على ضمان جودة المنتج البرمجي الذي تقدمه الشركة من خلال manual testing.",
+      "العمل على بناء بيئة automation testing متكاملة باستخدام Cypress.",
+      "تسهيل عمل أفراد الفريق من خلال تقديم تقارير واضحة ومفصلة بخصوص bugs.",
+      "تطبيق اختبارات امان تضمن حماية المنتج البرمجي من عمليات الاحتيال.",
     ],
   },
 ];

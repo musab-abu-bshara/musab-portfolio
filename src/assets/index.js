@@ -39,8 +39,10 @@ import materialui from "./tech/materialui.png";
 import less from "./tech/less.png";
 import jest from "./tech/jest.png";
 import nestjs from "./tech/nestjs.png";
+import Cypress from "./tech/Cypress.png"
 
 import orienteed from "./company/orienteed.jpeg";
+import jaffal from "./company/jaffal.png"
 import najah from "./company/najah.png";
 import grids from "./company/grids.jpeg";
 
@@ -126,10 +128,12 @@ export {
   less,
   jest,
   nestjs,
+  Cypress,
   rust,
   threejs,
   orienteed,
   najah,
+  jaffal,
   grids,
   thuraa,
   dashboard,
