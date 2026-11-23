@@ -44,11 +44,9 @@ const App = () => {
           <LazyTech />
         </Suspense>
 
-        {/* "Works" section hidden for now (old tutorial projects). To show it again,
-            uncomment this block and the "works" link in constants/index.js. */}
-        {/* <Suspense fallback={<SectionLoader />}>
+        <Suspense fallback={<SectionLoader />}>
           <LazyWorks />
-        </Suspense> */}
+        </Suspense>
 
         <Suspense fallback={<SectionLoader />}>
           <LazyOngoingProjects />

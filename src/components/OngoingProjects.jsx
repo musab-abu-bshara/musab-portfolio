@@ -7,7 +7,6 @@ import { ongoingProjects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import LazyImage from "./LazyImage";
 import TiltWrapper from "./TiltWrapper";
-import FlagshipSaaS from "./FlagshipSaaS";
 
 const OngoingProjectCard = ({ project, index }) => {
   return (
@@ -172,9 +171,7 @@ const OngoingProjects = () => {
         </motion.p>
       </div>
 
-      <FlagshipSaaS />
-
-      <div className="mt-16 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7">
         {ongoingProjects.map((project, index) => (
           <OngoingProjectCard
             key={`ongoing-${project.id}`}

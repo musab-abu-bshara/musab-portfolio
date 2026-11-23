@@ -29,7 +29,6 @@ import {
   java,
   nextjs,
   Cypress,
-  typescript,
   expressjs,
   tauri,
   orienteed,
@@ -75,7 +74,6 @@ import {
   ftWebp,
   lsWebp,
   threejs,
-  logo,
 } from "../assets";
 
 export const navLinks = [
@@ -87,11 +85,10 @@ export const navLinks = [
     id: "experience",
     title: "خبرتي",
   },
-  // "Works" section is hidden for now (see App.jsx). Restore this link with it.
-  // {
-  //   id: "works",
-  //   title: "أعمالي",
-  // },
+  {
+    id: "works",
+    title: "أعمالي",
+  },
   {
     id: "ongoing",
     title: "مشاريع حالية",
@@ -141,10 +138,6 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
   },
   {
     name: "rust",
@@ -248,7 +241,7 @@ const experiences = [
     company_name: "Jaffal Group",
     icon: jaffal,
     iconBg: "#383E56",
-    date: "فبراير 2026 - حتى الآن",
+    date: "2026",
     points: [
       "العمل على ضمان جودة المنتج البرمجي الذي تقدمه الشركة من خلال manual testing.",
       "العمل على بناء بيئة automation testing متكاملة باستخدام Cypress.",
@@ -258,8 +251,32 @@ const experiences = [
   },
 ];
 
-// Real testimonials only. Add entries here when real references are available.
-const testimonials = [];
+const testimonials = [
+  {
+    testimonial:
+      "مصعب مطور محترف جداً، أنجز المشروع بكفاءة عالية وفي الوقت المحدد. أنصح بالعمل معه.",
+    name: "أحمد محمد",
+    designation: "مدير تقني",
+    company: "شركة التقنية",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+  },
+  {
+    testimonial:
+      "تجربة رائعة في العمل مع مصعب، يفهم المتطلبات بسرعة ويقدم حلول إبداعية.",
+    name: "سارة علي",
+    designation: "مديرة مشاريع",
+    company: "شركة الابتكار",
+    image: "https://randomuser.me/api/portraits/women/5.jpg",
+  },
+  {
+    testimonial:
+      "موقعنا الإلكتروني أصبح أسرع وأكثر احترافية بفضل عمل مصعب المتميز.",
+    name: "خالد حسن",
+    designation: "المدير التنفيذي",
+    company: "مؤسسة الأعمال",
+    image: "https://randomuser.me/api/portraits/men/6.jpg",
+  },
+];
 
 const projects = [
   {
@@ -413,7 +430,7 @@ const projects = [
 // Footer data
 const footerData = {
   logo: {
-    src: logo,
+    src: "/Blogo.webp",
     alt: "مصعب أبوبشارة",
   },
   social: [
@@ -457,65 +474,15 @@ const footerData = {
   copyright: "© 2026 جميع الحقوق محفوظة – مصعب أبوبشارة",
 };
 
-const flagshipSaaS = {
-  badge: "مشروع سري · قريب من الإطلاق",
-  title: "منصة SaaS متعددة المستأجرين (Multi-tenant) — بنيتها من الصفر",
-  summary:
-    "منصة SaaS كاملة عملت عليها لمدة 12 شهراً تقريباً، وتوليت فيها كل مراحل دورة حياة البرمجيات بنفسي: المتطلبات، التصميم، الواجهات، الباك إند، الاختبار، النشر والتشغيل. تفاصيل المنتج سرية حتى موعد الإطلاق، لكن هذه هي الخبرات الهندسية التي بنيتها فيه.",
-  stats: [
-    { label: "مدة العمل", value: "12 شهراً" },
-    { label: "البيئات", value: "Staging + Production" },
-    { label: "البنية", value: "Multi-tenant" },
-    { label: "الحالة", value: "قريب من الإطلاق" },
-  ],
-  highlights: [
-    {
-      title: "بنية Multi-tenant",
-      text: "نطاق فرعي (subdomain) لكل عميل مع لوحة تحكم رئيسية للمنصة، وعزل كامل لبيانات كل عميل عن غيره، مع مجموعة اختبارات خاصة تثبت هذا العزل.",
-    },
-    {
-      title: "دورة حياة كاملة (SDLC)",
-      text: "من كتابة المتطلبات والتذاكر، إلى خطة تقنية، إلى التنفيذ، ثم حالات اختبار واضحة، ثم النشر والمتابعة بعد الإطلاق.",
-    },
-    {
-      title: "النشر والتشغيل (DevOps)",
-      text: "خادم VPS أديره بنفسي، ونطاقان منفصلان لبيئتي staging و production، ونشر تلقائي عبر CI/CD، و Nginx و PM2.",
-    },
-    {
-      title: "الجودة والاختبار",
-      text: "اختبارات وحدة، ومجموعة اختبارات API تعمل تلقائياً في CI، و mutation checks للتأكد أن كل اختبار يكشف الخطأ فعلاً.",
-    },
-    {
-      title: "الأمان وحماية البيانات",
-      text: "مصادقة JWT مرتبطة بكل عميل، وصلاحيات حسب الدور، ورفض أي وصول بين العملاء، و migrations مضبوطة لقاعدة البيانات.",
-    },
-    {
-      title: "الأداء وسهولة الاستخدام",
-      text: "تصميم mobile-first يعمل على شاشة 390px، ودعم RTL، وحالات تحميل وخطأ في كل شاشة، وتخصيص الهوية (الألوان والشعار) لكل عميل.",
-    },
-    {
-      title: "تطوير AI-native",
-      text: "أستخدم Claude كمساعد هندسي بطريقة منظمة: تذكرة، ثم خطة، ثم تنفيذ، ثم مراجعة واختبار كل تغيير قبل اعتماده.",
-    },
-  ],
-  stack: [
-    "React",
-    "TypeScript",
-    "Vite",
-    "Tailwind",
-    "TanStack Query",
-    "NestJS",
-    "PostgreSQL",
-    "TypeORM",
-    "REST API",
-    "Jest",
-    "CI/CD",
-    "Nginx",
-  ],
-  note: "يسعدني شرح البنية والقرارات التقنية بالتفصيل في المقابلة.",
-};
-
 const ongoingProjects = [
+  {
+    id: "sc",
+    image: sc,
+    imageAvif: scAvif,
+    imageWebp: scWebp,
+    type: "web app",
+    technologies: ["Next.js", "Tailwind"],
+  },
   {
     id: "kh",
     image: kh,
@@ -566,6 +533,5 @@ export {
   projects,
   footerData,
   ongoingProjects,
-  flagshipSaaS,
   // skills,
 };
