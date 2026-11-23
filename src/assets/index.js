@@ -40,6 +40,7 @@ import less from "./tech/less.png";
 import jest from "./tech/jest.png";
 import nestjs from "./tech/nestjs.png";
 import Cypress from "./tech/Cypress.png"
+import typescript from "./tech/typescript.png";
 
 import orienteed from "./company/orienteed.jpeg";
 import jaffal from "./company/jaffal.png"
@@ -129,6 +130,7 @@ export {
   jest,
   nestjs,
   Cypress,
+  typescript,
   rust,
   threejs,
   orienteed,
